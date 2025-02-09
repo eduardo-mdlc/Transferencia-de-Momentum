@@ -4,7 +4,8 @@
 %% License: ISC license                          %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[a4paper,11pt]{book}
+\documentclass[11pt, fleqn]{book}
+\usepackage[b5paper, top=2.5cm, bottom=2.5cm, left=2cm, right=2cm]{geometry} %para personalizar el tamaño y margenes de la hoja
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -17,7 +18,17 @@
 
 \usepackage{float} %lo agregue para las tablas qeu andaban de rebeldes
 \usepackage{amsmath} %lo agregue para la numeración de las Ecuaciones
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{mathtools}
 \usepackage{amssymb}
+\usepackage{stackengine}
+\usepackage{graphicx} %para las imagenes
+\usepackage{float}
+%*************Aun falta el graphics path%
+\usepackage{lscape} %necesario para usar la propiedad "begin{landscape}"
+\usepackage{longtable} %necesario para usa la propiedad "longtable"
+\usepackage{booktabs} %necesario para usar la propiedad "toprule"
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 'dedication' environment: To add a dedication paragraph at the start of book %
