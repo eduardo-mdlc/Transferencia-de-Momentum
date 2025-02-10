@@ -1,12 +1,13 @@
+\chapter{Capítulo 2}
 \maketitle
 
 \subsection{ Difusión con reacción química homogénea}
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.5\linewidth]{Captura de Pantalla 2024-12-22 a la(s) 21.39.31.png}
+   % \includegraphics[width=0.5\linewidth]{Captura de Pantalla 2024-12-22 a la(s) 21.39.31.png}
     \caption{Adsorción de A en B, con reacción homogénea en la fase líquida}
-    \label{fig:enter-label}
+    %\label{fig:enter-label}
 \end{figure}
 
 En la fig 2.9, el gas A se disuelve en el líquido B. Al difundirse A en B, ocurre una reacción $A+B\xrightarrow{}AB$. Por ejemplo, la absorción de $CO_2$ en una solución de NaOH.
@@ -100,9 +101,9 @@ Considere un sistema en el que el gas A disuelto se combina con el líquido B po
 ¡Aquí van las figuras 2.10
 \begin{figure}
     \centering
-    \includegraphics[width=0.5\linewidth]{Captura de Pantalla 2025-02-01 a la(s) 21.38.54.png}
+    %\includegraphics[width=0.5\linewidth]{Captura de Pantalla 2025-02-01 a la(s) 21.38.54.png}
     \caption{Perfil de concentración predicho en la pekícula de líquido que rodea a una burbuja}
-    \label{fig:enter-label}
+    %\label{fig:enter-label}
 \end{figure}
 
 Este sistema tiene las siguientes condiciones en la frontera:
@@ -179,9 +180,9 @@ Cuando $\phi=0$ $\widetilde{N}\rightarrow1$ ($B=0$)
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.5\linewidth]{Captura de Pantalla 2024-12-22 a la(s) 21.50.44.png}
+  %  \includegraphics[width=0.5\linewidth]{Captura de Pantalla 2024-12-22 a la(s) 21.50.44.png}
     \caption{Adsorción de gas con reacción química}
-    \label{fig:enter-label}
+    %\label{fig:enter-label}
 \end{figure}
 
 
