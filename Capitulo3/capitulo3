@@ -1,1 +1,67 @@
 
+\chapter{Capítulo 3}
+Capa Límite con Difusión, Dispersión de Taylor y Flujo Turbulento con Difusión.
+
+Este capítulo consta de las siguientes partes:
+\begin{enumerate}
+    \item Capa límite.
+    \item Convección forzada con reacción química homogéna en una placa plana.
+    \item Convección forzada  placa plana con transferencia de masa rápida.
+    \item Convección forzada  placa plana con transferencia de masa lenta.
+    \item Dispersión de Tayloren flujo laminar.
+    \item Transferencia de masa con reacción de $1^{\text{er}}$ orden en flujo laminar turbulento.
+    \item Flujo turbulento en reacción de $2^{\circ}$ orden. Mezclado turbulento.
+\end{enumerate}
+\section{Capa límite binaria}
+Considerar un flujo binario a régimen permanente de un fluido binario. En la vecindad de la superficie sólida, las ecuaciones qeu gobiernan el proceso en ausencia de disipación viscosa son:
+ \begin{equation}
+\text{Continuidad: }\frac{\partial v_x}{\partial x} + \frac{\partial v_y}{\partial y} = 0 \label{3.1}
+\end{equation}
+\begin{equation}
+    \begin{split}
+    \text{Movimiento: } &\rho \left( v_x \frac{\partial v_x}{\partial x} + v_y \frac{\partial v_x}{\partial y} \right) =- \rho v_e \frac{\partial v_e}{\partial x} + \mu \frac{\partial^2 v_x}{\partial y^2} \\
+    & + \bar{\rho} g_x \beta (T - T_{\infty}) + \bar{\rho} g_x \bar{\zeta} (w_A - w_{A\infty})
+    \end{split}
+    \label{3.2}
+\end{equation}
+\begin{equation}
+    \text{Energía: } \rho \bar{C_p} \left( v_x \frac{\partial T}{\partial x} + v_y \frac{\partial T}{\partial y} \right) = 
+    k \frac{\partial^2 T}{\partial y^2} - \left( \frac{\bar{H}_A}{M_A} - \frac{\bar{H}_B}{M_B} \right) r_A
+    \label{3.3}
+\end{equation}
+\begin{equation}
+    \text{Continuidad de A: } \rho \left( v_x \frac{\partial w_A}{\partial x} + v_y \frac{\partial w_A}{\partial y} \right) = 
+    \rho \mathscr{D}_{AB}  \frac{\partial^2 w_A}{\partial y^2} + r_A 
+    \label{3.4}
+\end{equation}
+donde $v_e$ es la velocidad en el límite externo de la capa límite de velocidad, $T_{\infty}$ es la temperatura en el límte externo de la capa límite térmica y $w_{A\infty}$ es la concentración másica en el límite externo de la capa límite difusional.
+Los términos de flotación en la ec.(\ref{3.2}) provenien del efecto témrico y del de concentración. En la ec.\eqref{3.3} se incluye el término de fuente de calor por reacción química. Las ecs.\ref{3.1}-\ref{3.4} pueden ser integrados para dar
+
+Ecs. continuidad+movimiento:
+\begin{equation}
+    \begin{split}
+    \mu \frac{du_x}{dy} \bigg|_{y=0} = &\frac{d}{dx} \int_{0}^{\infty} \rho v_x (v_e - v_x) dy + \frac{d v_e}{dx} \int_{0}^{\infty} \rho (v_e - u_x) dy + \rho v_o v_e + \\
+   &- \int_{0}^{\infty} \rho g_x \beta (T - T_{\infty}) dy  - \int_{0}^{\infty} \rho g_x \bar{\zeta} (w_A - w_{A\infty}) dy
+    \label{3.5}
+\end{split}
+\end{equation}
+
+Ecs. continuidad+energía:
+\begin{equation}
+    k \frac{dT}{dy} \bigg|_{y=0} = \frac{d}{dx} \int_{0}^{\infty} \rho v_x \bar{C_p} (T_{\infty} - T) dy
+    - \int_{0}^{\infty} \left( \frac{\bar{H}_A}{M_A} - \frac{\bar{H}_B}{M_B} \right) r_A dy
+    - \rho v_{\infty} \bar{C_p} (T_{\infty} - T_0) 
+    \label{3.6}
+\end{equation}
+
+Ecs. continuidad+continuidad de A:
+\begin{equation}
+    \rho \mathscr {D}_{AB} \frac{dw_A}{dy} \bigg|_{y=0} = \frac{d}{dx} \int_{0}^{\infty} \rho u_x (w_{A\infty} - w_A) dy
+    + \int_{0}^{\infty} r_A dy - \rho v_{0} (w_{A\infty} - w_{A0})
+    \label{3.7}
+\end{equation}
+
+Estas ecuaciones son extensiones de los balances de von Kármán y de la integral de momentum expuestas en el libro 1, Cap. 5.
+
+\section{Convección forzada con...}
+
