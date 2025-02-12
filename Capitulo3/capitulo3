@@ -65,3 +65,171 @@ Estas ecuaciones son extensiones de los balances de von Kármán y de la integra
 
 \section{Convección forzada con...}
 
+\newpage
+\subsection{Flujo Turbulento con Reacción de Segundo Orden. Mezclado Turbulento}
+
+Considerar dos casos en los que existen dos solutos $A$ y $B$ disueltos en un solvente $S$. En el primer caso no existe reacción, y en el segundo caso se produce la reacción:
+\begin{equation*}
+    A + B \rightarrow \text{productos}
+\end{equation*}
+En ambos casos se estudia el mezclado turbulento en dos sistemas: mezclador estático (a) y dinámico (b).
+
+\begin{figure}[h]
+    \centering
+    \caption{Mezclador estático (a) y mezclador dinámico (b)}
+    \label{fig_3.8}
+\end{figure}
+
+El comportamiento de los solutos $A$ y $B$ se describe por medio de las siguientes ecuaciones de difusión:
+
+\begin{equation}
+    \frac{\partial C_A}{\partial t} + \underline{v} \cdot \nabla C_A = \mathscr{D}_{AS} \nabla^2 C_A + R_A
+    \notag
+\end{equation}
+
+\begin{equation}
+    \frac{\partial C_B}{\partial t} + \underline{v} \cdot \nabla C_B = \mathscr{D}_{BS} \nabla^2 C_B + R_B
+    \label{eq_3.82}
+\end{equation}
+
+
+
+
+Condiciones de frontera:
+
+\begin{equation}
+    C_A = C_{A0}, \quad C_B = 0 \quad \text{para } z=0, t=0
+    \notag
+\end{equation}
+
+\begin{equation}
+    C_B = C_{B0}, \quad C_A = 0 \quad \text{para } z=0, t=0
+\end{equation}
+
+\subsubsection{Sin Reacción}
+
+Definiendo:
+\begin{equation}
+    \Gamma = \frac{C_{A0} - C_A}{C_{A0}} = \frac{C_B}{C_{B0}}
+\end{equation}
+
+Las ecuaciones \ref{eq_3.82} se reducen a:
+
+\begin{equation}
+    \frac{\partial \Gamma}{\partial t} + v \cdot \nabla \Gamma = D_{is} \nabla^2 \Gamma
+\end{equation}
+
+En las entradas (1) y (2):
+
+\begin{equation}
+    \Gamma_1 = 0, \quad \Gamma_2 = 1 \notag
+\end{equation}
+
+En flujo turbulento se propone que:
+
+\begin{equation}
+    \Gamma = \bar{\Gamma} + \Gamma'
+\end{equation}
+
+donde:
+\begin{equation}
+   \bar{\Gamma} = \frac{C_{A0} - \bar{C}_A}{C_{A0}} = \frac{\bar{C}_B}{C_{B0}}
+\end{equation}
+
+
+
+
+y $\Gamma'$ (grado de ausencia de mezclado). Restando $\Gamma$ - $\bar{\Gamma}$  y efectuando el cuadrático medio:
+
+\begin{equation}
+    \left( \frac{C_A}{C_{A0}} \right)^2 - \left( \frac{\bar{C}_B}{C_{B0}} \right)^2 = d^2
+\end{equation}
+
+En donde $d^2$ es la función de decaimiento que tiende a cero a distancias $z$ grandes o tiempos largos.
+
+
+La administración de la función de decaimiento indica su dependencia funcional. Definiendo la longitud y velocidades características $l_{0}$ y $v_{0}$, obtuvimos:
+
+\begin{equation}
+    \frac{\partial\Gamma}{\partial t} + v_{b}\hat{\nabla}\Gamma = \frac{1}{Re Sc}\hat{\nabla}^{2}\Gamma  \label{eq_3.89}
+\end{equation}
+
+
+donde 
+
+\begin{equation}
+      \hat{t}=\frac{v_0t}{l_0}, \quad 
+      \hat{v}=\frac{v}{v_0},\quad
+      \hat{\nabla}=l_0\nabla, \quad
+       Re=\frac{l_0v_0}{\mu}\rho 
+\end{equation}
+
+En el caso de tanques de mezclado, $l_0$ es el diámetro del impulson, $v_0=l_0N$ (N es la velocidad angular). En el caso del mezclado de dos corrientes de tubos concéntriccos (HACER REFERENCIA AL DIAGRAMA DE ABAJO - FIG.3.9), la función de decaimiento resultante se grafica en función de la distnacia axial. El mezclado a nivel molecular (micomezclado) se alcanza
+
+AQUI VA OTRO DIAGRAMA 3.9
+
+En procesos industriales, normalamente $ReSc\sim10^9$, por lo que la ecuación \ref{eq_3.89} se reduce a:
+
+
+\begin{equation}
+    \frac{\partial\Gamma}{\partial t} + v_0\hat{\nabla}\Gamma = 0
+\end{equation}
+
+
+Por lo que el grado de mexclado depende de $\hat{t}$ y no de $ReSc$. Como $\hat{t}=Nt_{mix}$, el producto del tiempo de mezclado $t_{mix}$ por la velocidad angular es constante, independiente de $Re$, o sea, $Nt_{mix}=K$, donde K depende de la geometría solamente.
+
+\subsubsection{Con Reacción}
+\begin{equation*}
+    A + B \rightarrow \text{productos}
+\end{equation*}
+Definiendo
+\begin{equation}
+    \Gamma_{r}=\frac{C_{A0}-(C_A-C_B)}{C_{A0}+C_{B0}}
+\end{equation}
+Por la resta de las ecuaciones \ref{eq_3.82}, la descripción del caso con reacción es la misma. Por ello:
+\begin{equation}
+    \left[ \frac{C_{A0}-(C_A-C_B)}{C_{A0}+C_{B0}} \right]_{reac.}=   \left[ \frac{C_{A0}-C_A}{C_{A0}}\cdot\frac{C_B}{C_{B0}} \right]_{\text{sin reac.} }
+\end{equation}
+que tambien es válida para las fluctuaciones.
+\begin{equation}
+        \left[ \frac{C_A'-C_B'}{C_{A0}+C_{B0}} \right]_{reac.}=  \left[ \frac{C_A'}{C_{A0}} \right]_{\text{sin reac.} }
+\end{equation}
+Esta ecuación sugiere que las fluctuaciones en $C_A$ y $C_B$ en problemas con reacción tienen lugar al mismo tiempo y escalas de distancia que los problemas sin reacción. Los casos particualres son:
+\\
+\\
+a) Reacción rápida: La velocidad de la reacción es controlada por difusión de las especies. Durante la escala del micromezclado, en la que la difusión es lenta en comparación con la convección, el efecto de la reacción es pequeño. En este caso tenemos:
+\begin{equation}
+            \left( \frac{C_A'}{C_{A0}} \right)_{reac.}=  \left( \frac{C_A'}{C_{A0}} \right)_{\text{sin reac.} }
+\end{equation}
+En la práctica, las reacciones rápidas son empleadas para determinar la eficiencia de los mezlcados.
+\\
+\\
+b) Reacciones lentas: Considerar el caso de reacciones de segundo orden irreversibles.
+\begin{equation}
+    R_A=-k_2C_AC_B
+\end{equation}
+Promediando en el tiempo: 
+\begin{equation}
+    R_A=-k_(\bar{C_A}\bar{C_B}+C_A'C_B')
+\end{equation}
+Esto indica que las fluctuaciones en $C_A$ y $C_B$ incrementan la velocidad de reacción. Por medio de un análisis de órdenes de magnitud, tenemos:
+\begin{equation}
+    t_A=\frac{C_{A0}}{R_A}\sim\frac{1}{k_2C_{B0}}
+\end{equation}
+Para una reacción rápida $t_{mix}>>t_A$ 
+\\
+Para una reacción lenta $t_{mix}<<t_A$
+
+
+
+\newpage
+\subsection*{Apéndice A}
+a) Transferencia de masa lenta en una placa plana. Uso de la ecuación \textbf{HACER REFERENCIA A LA ECUACIÓN 3.46}
+\\
+Estimación de la velocidad de evaporación, $u_{A0}$, como función de $Sc$, del secado de una placa plana porosa saturada de agua \textbf{HACER REFERENCIA A LA FIGURA 3.2} por medio de una corriente de aire bajo condiciones tal que $W_{A0}=0.05$, $W_{A0}=0.01$ y $Sc=0.6$.
+\\
+La ecuación \textbf{HACER REFERENCIA A LA ECUACIÓN 3.46} es:
+\begin{equation*}
+    \frac{j_{A0}}{\rho v_o(W_{A0}-W_{A\infty})}Sc^{2/3}=0.332\sqrt{\frac{\nu}{v_\infty x}}
+\end{equation*}
+Por medio de las ecuaciones \textbf{EC 1.24 Y 1.26}:
