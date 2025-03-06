@@ -1,0 +1,425 @@
+\chapter{Capitulo 1}
+\justifying
+\textbf{Introducción}: Consta de las siguientes secciones:
+ 	\begin{enumerate}
+ 		 \item Definiciones. 
+ 		 \item Ecuaciones de Conservación.
+ 		  \item Ecuacione Constitutiva. Ley de Fick.
+ 		   \item Balance de Masa. 
+ 		   \item Calculo de la Difusividad. 
+ 	   \end{enumerate} 
+ 	   \section{Definiciones} 
+ 	   \begin{itemize}
+ 	  \item \emph{$\rho_i$}: Concentración másica de la especie i (masa de i/volumen)
+ 	  \item $C_i$=$\frac{\rho_i}{\mu_i}$: Concentración molar de la especie i (moles/volumen)
+ 	  \item $w_i=\frac{\rho_i}{\rho}$: fracción masica de i ($\rho$ es la densidad de la solución)
+ 	  \item $x_i=\frac{C_i}{C}$: fracción molar ($C$ es la densidad molar total de la solución)
+ 	  \item \emph{$ \underline{v}_i$}: velocidad de la especie i con respecto a un sistema de coordenadas fijo. La velocidad promedio local \emph{$ \underline{v}$} se define como:
+ 	 \end{itemize}
+ 	 \begin{equation}
+ 	 \emph{$ \underline{v}=\frac{\sum_{i=1}^n \rho_i  \underline{v}_i}{\sum_{j=1}^n \rho_i}$}
+ 	 \tag{1.1}
+     \label{eq_1.1}
+ 	  \end{equation}
+ 	  \emph{$\rho  \underline{v}$} = flux de masa. La velocidad promedio molar es:
+ 	   \begin{equation}
+ 	  	\emph{$ \underline{v}^*=\frac{\sum_{i=1}^n C_i  \underline{v_i}}{\sum_{i=1}^n C_i}$}
+ 	  	\tag{1.2}
+        \label{eq_1.2}
+ 	  \end{equation}
+ 	
+$C\underline{\emph{v}}=$flux molar de masa.
+ \begin{equation}
+ \underline{	{v}_i} -\underline{{v} }=\quad \text{velocidad de difusión de $i$ con respecto a ${v}$}. \tag{1.3}
+ \label{eq_1.3}
+ \end{equation}
+ 
+ \begin{equation}
+ 	\underline{{v}_i} -\underline{{v}^*}=\quad \text{velocidad de difusión de $i$ con respecto a $\vec{v}^*$}. \tag{1.4} \label{eq_1.4}
+ \end{equation}
+ 
+ Con respecto a ejes estacionarios, los flujos de masa se definen de la siguiente manera:
+ \begin{equation}
+ 	\underline{n}_i = \rho_i \underline{v}_i \quad \text{másico} \tag{1.5}
+    \label{eq_1.5}
+ \end{equation}
+ \begin{equation}
+ 	\underline{N}_i = C_i \underline{v}_i \quad \text{molar} \tag{1.6}\label{eq_1.6}
+ \end{equation}
+ 
+ Con respecto a las velocidades promedio:
+ \begin{equation}
+ 		\underline{{j}_i} = \rho_i (	\underline{{v}_i} -\underline{v}) \tag{1.7}\label{eq_1.7}
+ \end{equation}
+ \begin{equation}
+ 	\underline{{J}_i} = C_i (\underline{{v}_i} -	\underline{v}) \tag{1.8} \label{eq_1.8}
+ \end{equation}
+ 
+ Con respecto a las velocidades molares promedio:
+ \begin{equation}
+ 	\underline{j}_i^* = \rho_i (\underline{v}_i - \underline{v}^*) \quad \text{másico} \tag{1.9} \label{eq_1.9}
+ \end{equation}
+ \begin{equation}
+ 	\underline{J}_i^* = C_i (\underline{v}_i - \underline{v}^*) \quad \text{molar} \tag{1.10} \label{eq_1.10}
+ \end{equation}
+ 
+ Relaciones entre los flujos molares. A partir de las ecs. \textbf{\eqref{eq_1.2}} y \textbf{\eqref{eq_1.10}} :
+ \begin{equation}
+ 	\underline{J}_i^* = C_i (\underline{v}_i - \underline{v}^*) = C_i \underline{v}_i^* - \frac{C_i}{C} \sum_{j=1}^n C_j \underline{v}_j \tag{1.11} \label{eq_1.11}
+ \end{equation}
+ 
+ Por las relaciones (ecs. \textbf{\eqref{eq_1.6}} y $x_i$):
+ \begin{equation}
+ 	\underline{J}_i^* = \underline{v}_i - x_i \sum_{j=1}^n x_j \underline{v}_j \tag{1.12}\label{eq_1.12}
+ \end{equation}
+ 
+ Para un sistema binario=$\underline{J}_A^*=\underline{N}_A-x_A (\underline{N_A}+\underline{N_B})$
+ 
+ Para los fluxes másicos con respecto a \underline{\emph{v}} tenemos que: $\underline{J}_A=\underline{n}_A-w_A (\underline{n_A}+\underline{n_B})$
+
+ A partir de la ec. \textbf{\eqref{eq_1.12}} se obtiene que:
+ \begin{equation}
+ 	\sum_{i=1}^n \underline{J}_i^* =0 \tag{1.13}\label{eq_1.13}
+ \end{equation}
+ 
+ y para una mezcla binaria se obtiene:
+ \begin{equation}
+ 	\underline{J}_A^* + \underline{J}_B^* = 0 \tag{1.14}\label{eq_1.14}
+ \end{equation}
+ 
+ Igualmente, la ec. \textbf{\eqref{eq_1.1}} puede ser escrita como:	
+ 
+$\rho \underline{\emph{v}}=\rho_A \underline{\emph{v}}_A+\rho_B \underline{\emph{v}}_B=\underline{n}_B+\underline{n}_B$
+ 
+ y la ec. \textbf{\eqref{eq_1.7}} puede ser expresada como:
+ 
+ $ \underline{j}_A=	\rho_A \underline{v}_A + \rho_A \underline{v} \Rightarrow \underline{n}_A = \underline{j}_A + \rho_A \underline{v} $
+ 
+ \section{Ecuaciones de Conservación}
+ \textbf{Mezclas Binarias}
+ 
+ La ecuación de continuidad para el componente $A$ en una mezcla binaria está dada por la siguiente ecuación:
+ \begin{equation}
+ 	\frac{\partial \rho_A}{\partial t} + \nabla \cdot \underline{n}_A = r_A \tag{1.15}\label{eq_1.15}
+ \end{equation}
+ 
+ donde $\underline{n}_A=\rho_A \underline{v}_A$ es el flujo de masa.		 Similarmente, para el componente $B$:
+ \begin{equation}
+ 	\frac{\partial \rho_B}{\partial t} + \nabla \cdot \underline{n}_B = r_B \tag{1.16}\label{eq_1.16}
+ \end{equation}
+ 
+ La adición de \textbf{\eqref{eq_1.15}} y \textbf{\eqref{eq_1.16}} (en donde  $\underline{n}_A + \underline{n}_B = \rho \underline{v}$ y $r_A + r_B = 0$)
+ \begin{equation}
+ 	\frac{\partial \rho}{\partial t} + \nabla \cdot \rho \underline{v} = 0 \tag{1.17} \label{eq_1.17}
+ \end{equation}
+ 
+ que es la ecuación de continuidad o conservación de masa de la mezcla. En caso en que $\rho$ es constante:
+ \begin{equation}
+ 	\nabla \cdot \underline{v} = 0 \tag{1.18}\label{eq_1.18}
+ \end{equation}
+ 
+ En términos de las variables molares:
+ \begin{equation}
+ 	\frac{\partial C_A}{\partial t} + (\nabla \cdot \underline{N_A}) = R_A \tag{1.19} \label{eq_1.19}
+ \end{equation}
+ \begin{equation}
+ 	\frac{\partial C_B}{\partial t} + \nabla \cdot \underline{N}_B = R_B \tag{1.20} \label{eq_1.20}
+ \end{equation}
+ 
+ Adicionando:
+ \begin{equation}
+ 	\frac{\partial C}{\partial t} + \nabla \cdot C {v}^* = R_A + R_B \tag{1.21} \label{eq_1.21}
+ \end{equation}
+ 
+ La ecuación \textbf{\eqref{eq_1.21}} supone que $\underline{N}_A +\underline{ N}_B = C \underline{v}^*$ y $R_A + R_B \neq 0$ si los moles no se conservan. Para un fluido de $C$ constante:
+ \begin{equation}
+ 	\nabla \cdot \underline{v}^* = \frac{1}{C} (R_A + R_B) \tag{1.22}
+    \label{eq_1.22}
+ \end{equation}
+ 
+ En el \underline{Apéndice A}, la ecuación \textbf{\eqref{eq_1.19}} se expresa en los tres sistemas de coordenadas.
+
+
+
+ \section{Ecuación constitutiva: Ley de Fick}
+
+Definiendo la difusividad másica $\mathscr{D}_{AB}=\mathscr{D}_{BA}$ en un sistema binario, la expresión del flux de masa es:
+\begin{equation}
+	\underline{J}_A^* = - \emph{C} \mathscr{D}_{AB} \nabla x_A  \tag{1.23}
+    \label{eq_1.23}
+\end{equation}
+Análogamente,
+\begin{equation}
+	\underline{j}_A = - \rho \mathscr{D}_{AB} \nabla w_A  \tag{1.24}\label{eq_1.24}
+\end{equation}
+
+Esta es la primera ley de Fick de difusión. En términos de $N_A$ relativo a coordenadas estacionarias,
+\begin{equation}
+	\underline{N}_A = x_A (\underline{N}_A + \underline{N}_B) - \emph{C} \mathscr{D}_{AB} \nabla x_A  \tag{1.25}\label{eq_1.25}
+\end{equation}
+
+
+\begin{equation}
+	\underline{n}_A = w_A (\underline{n}_A + \underline{n}_B) - \rho \mathscr{D}_{AB} \nabla w_A  \tag{1.26}\label{eq_1.26}
+\end{equation}
+
+ \section{Balance de Masa}
+ Sustituyendo la ecuación \textbf{\eqref{eq_1.26}} en la ecuación \textbf{\eqref{eq_1.15}} se obtiene:
+ \begin{equation}
+ 	\frac{\partial \rho_A}{\partial t} + \nabla \cdot \rho_A \underline{v} = \nabla \cdot \rho \mathscr{D}_{AB} \nabla w_A + r_A \tag{1.27}\label{eq_1.27}
+ \end{equation}
+ 
+ Similarmente, sustituyendo la ecuación \textbf{\eqref{eq_1.25}} en la ecuación \textbf{\eqref{eq_1.19}} se obtiene:
+ \begin{equation}
+ 	\frac{\partial {C}_A}{\partial t} + \nabla \cdot C_A \underline{v}^* = \nabla \cdot C \mathscr{D}_{AB} \nabla x_A + R_A  \tag{1.28}\label{eq_1.28}
+ \end{equation}
+ 
+ Si $\rho$ y $\mathscr{D}_{AB}$ son constantes, entonces:
+ \begin{equation}
+ 	\frac{\partial \rho_A}{\partial t} + \rho  (\nabla\cdot \underline{v})+\underline{v} \cdot \nabla \rho_A = \mathscr{D}_{AB} \nabla^2 \rho_A + r_A  \tag{1.29}\label{eq_1.29}
+ \end{equation}
+ 
+ donde $\nabla \cdot v = 0$ (Ec. \textbf{\eqref{eq_1.18}}). Dividiendo \textbf{\eqref{eq_1.29}} entre $M$ se obtiene:
+ \begin{equation}
+ 	\frac{\partial C_A}{\partial t} + \underline{v} \cdot \nabla C_A = \mathscr{D}_{AB} \nabla^2 C_A + R_A  \tag{1.30} \label{eq_1.30}
+ \end{equation}
+ 
+ Esta ecuación se emplea comúnmente en soluciones diluidas líquidas. Si $C$ y $\mathscr{D}_{AB}$ son constantes, la ecuación \textbf{\eqref{eq_1.28}} se convierte en:
+ \begin{equation}
+ 	\frac{\partial C_A}{\partial t} +C_A (\nabla \cdot \underline{v}^*)+ \underline{v}^*\cdot\nabla C_A  = \mathscr{D}_{AB} \nabla^2 C_A + R_A \tag {1.31}\label{eq_1.31}
+ \end{equation}
+ 
+ Como: $	\nabla \cdot \underline{v^*}= \frac{1}{c} (R_A + R_B) \quad \text{(Ver ec. \textbf{\eqref{eq_1.21})}}$
+ 
+ Entonces:
+ \begin{equation}
+ 	\frac{\partial C_A}{\partial t} + \underline{v}^* \cdot\nabla C_A=\mathscr{D}_{AB} \nabla^2 C_A+R_A-\frac{C_A}{C}(R_A+R_B) \tag{1.32}\label{eq_1.32}
+ \end{equation}
+ Si la velocidad es cero y no hay reacción química, se obtiene:
+  \begin{equation}
+ 	\frac{\partial C_A}{\partial t}=\mathscr{D}_{AB} \nabla^2 C_A \tag{1.33}\label{eq_1.33}
+ 	\end{equation}
+ 	
+ \section{Cálculo de la difusividad}
+ \subsection{Teoría de la difusión de gases a baja densidad.}
+ 		Considerar un gas con moléculas A y A$^*$	que tienen la misma masa $m_A$
+ 		y el mismo tamaño y forma. Se plantea determinar la difusividad másica $\mathscr{D}_{AA^*}$
+ 		de un sistema de moléculas rígidas de diámetro $d_A$. Utilizando las definiciones obtenidas en el libro y en la teoría cinética de gases:
+ 	
+ 	Velocidad promedio:
+ 		\begin{equation}
+ 			\langle v \rangle = \sqrt{\frac{8k_B	T}{\pi m}}  \tag{1.34}\label{eq_1.34}
+ 		\end{equation}
+ 		$k_B=$Constante de Boltzman
+ 	
+ 	Frecuencia de colisiones:
+ 		\begin{equation}
+ 			Z = \frac{1}{4} n \langle v \rangle  \tag{1.35}\label{eq_1.35}
+ 		\end{equation}
+ 		Trayectoria libre media
+ 		\begin{equation}
+ 			\lambda = \frac{1}{\sqrt{2} \pi d^2 n}  \tag{1.36}\label{eq_1.36}
+ 		\end{equation}
+ 		Dado un dominio que contiene planos con encuadraciones diferentes separados por una distancia a, la relación entre a y $\lambda$ es:
+ 		 		\begin{equation}
+ 		 			a=\frac{2}{3} \lambda \tag{1.37}\label{eq_1.37}
+ 		 			\end{equation}
+        \begin{figure}[h]
+
+        \centering\includegraphics[width=0.6\linewidth]{Capitulo1/Imagenes/Fig_1.1.jpeg}
+        \caption{Transferencia molecular de A del plano (y-a) al plano(y)}
+        \label{fig:Fig_1.1}
+
+\end{figure}
+
+        
+        El flux de masa de A efectivo entre el plano (y+a) y el plano (y-a) es:
+        \begin{equation}
+N_{A_{y}} = \frac{1}{\vec{N}} \left[ n x_A  v_y^* \bigg|_{y} + \frac{1}{4}n x_A \langle v \rangle \bigg|_{y-a}- \frac{1}{4} nx_A\langle v \rangle \bigg|_{y+a} \right]
+\tag{1.38} \label{eq_1.38}
+\end{equation}
+
+Si el perfil de concentraciones es lineal, entonces:
+
+\begin{equation}
+x_A \bigg|_{y-a} = x_A \bigg|_{y-a} - \frac{2}{3}\lambda \frac{dx_A}{dy}
+\tag{1.39} \label{eq_1.39}
+\end{equation}
+
+\begin{equation}
+x_A \bigg|_{y+a} = x_A \bigg|_{y+a} + \frac{2}{3}\lambda \frac{dx_A}{dy}
+\tag{1.40} \label{eq_1.40}
+\end{equation}
+
+Ya que \( Cv^* = N_A + N_B \), las ecs. \textbf{\eqref{eq_1.37}}, \textbf{\eqref{eq_1.38}}, \textbf{\eqref{eq_1.39}} y \textbf{\eqref{eq_1.40}} se combinan para dar:
+
+\begin{equation}
+N_{A_{y}} = x_A \left( N_{A_y} + N_{A_y}^* \right) - \frac{2}{3}C \langle v \rangle \lambda \frac{dx_A}{dy} \tag{1.41}\label{eq_1.41}
+\end{equation}
+
+De acuerdo con la ley de Fick:
+
+\begin{equation}
+\mathscr{D}_{AB} = \frac{1}{3} \langle v \rangle \lambda  \tag{1.42}\label{eq_1.42}
+\end{equation}
+
+Utilizando la ley de los gases ideales ( $P = CRT = nk_BT $) y las expresiones para \( \langle v \rangle \) y \( \lambda \), se obtiene para la autodifusión:
+
+\begin{equation}
+\mathscr{D}_{AA}^* = \frac{2}{3} \left( \frac{k_B^3}{\pi^3 m_A} \right)^{1/2} \frac{T^{3/2}}{P d_A^2}\tag{1.43}\label{eq_1.43}
+\end{equation}
+
+La ecuación \textbf{\eqref{eq_1.42}} representa la difusividad másica de una mezcla de dos especies de esferas rígidas de igual masa y diámetro. En el caso de diferentes masas y diámetros, la ecuación \textbf{\eqref{eq_1.43}} se generaliza:
+
+\begin{equation}
+\mathscr{D}_{AB} = \frac{2}{3} \left( \frac{k_B^3}{\pi^3} \right) \left( \frac{1}{2 m_A} + \frac{1}{2 m_B} \right)^{1/2} \frac{T^{3/2}}{P \left( \frac{d_A + d_B}{2} \right)^2}\tag{1.44}\label{eq_1.44}
+\end{equation}
+
+La teoría de Chapman-Enskog proporciona expresiones más exactas del coeficiente de difusión:
+
+\begin{equation}
+c \mathscr{D}_{AB} = (2.625 \times 10^{-5}) \frac{\sqrt{T(\frac{1}{M_A}+\frac{1}{M_B})}}{\sigma_{AB}^2 \Omega_{\mathscr{D}_{AB}}}\tag{1.45}\label{eq_1.45}
+\end{equation}
+Si C está dada por la ley de los gases ideales, entonces:
+
+\begin{equation}
+\mathscr{D}_{AB} = 0.00186 \sqrt{T^3(\frac{1}{M_A}+\frac{1}{M_B})}\frac{1}{P \sigma_{AB}^2 \Omega_{\mathscr{D}_{AB}}}  \tag{1.46}\label{eq_1.46}
+\end{equation}
+
+\(\Omega_{\mathscr{D}_{AB}}\) es una función adimensional de la temperatura y del potencial intermolecular entre moléculas \( A \) y \( B \). Este potencial se aproxima por el de Lennard-Jones:
+
+\begin{equation}
+\varphi_{AB}=4 \epsilon_{AB}[(\frac{\sigma_{AB}}{r})^{12}-(\frac{\sigma_{AB}}{r})^6]  \tag{1.47}\label{eq_1.47}
+\end{equation}
+
+En el Apéndice C se pueden encontrar tablas de \( \Omega_{\mathscr{D}_{AB}} \) en función de \( k_B / \epsilon_{AB} \). Para esferas rígidas, \( \Omega_{\mathscr{D}_{AB}} = 1 \). En mezclas binarias:
+
+\begin{equation}
+\sigma_{AB} = \frac{1}{2} (\sigma_A+\sigma_B)\tag{1.48}\label{eq_1.48}
+\end{equation}
+
+\begin{equation}
+\epsilon_{AB} = \sqrt{\epsilon_A \epsilon_B}\tag{1.49}\label{eq_1.49}
+\end{equation}
+
+Las constantes $\sigma_{AB}$ y \( \epsilon_{AB} \) pueden ser identificadas en el Apéndice. En el caso de pares isotópicos:$\sigma_{AA^*}=\sigma_A=\sigma_A^*$  y  $\epsilon_{AA^*}=\epsilon_A=\epsilon_A^*$.
+
+
+
+
+Si \( M_A = M_B \), la ecuación \eqref{eq_1.45} se reduce a:
+
+\begin{equation}
+C\mathscr{D}_{AA^*} = 3.2 \times 10^{-5}\sqrt{\frac{T}{M_A}} \frac{1}{\sigma_A \Omega_{\mathscr{D}_{AA^*}}} \tag{1.50}\label{eq_1.50}
+\end{equation}
+
+Definiendo el número de Schmidt:
+
+\begin{equation}
+Sc = \frac{\mu / \rho}{\mathscr{D}_{AB}} = \frac{\nu}{\mathscr{D_{AB}}} (\text{0.2 - 5 en gases}) \tag{1.51}\label{eq_1.51}
+\end{equation}
+
+Tenemos que:
+
+\begin{equation}
+\frac{\nu}{\mathscr{D}_{AA^*}} = \frac{5}{6}\frac{\Omega_{\mathscr{D}_{AA^*}}}{ \Omega_\mu}\tag{1.52}\label{eq_1.52}
+\end{equation}
+
+Por lo que: $\mathscr{D}_{AA^*} \approx 1.32 \nu$
+\subsection{Dependencia de la difusividad de la presión y temperatura (PyT)}
+En sistemas de mezclas de gases a bajas presiones,  $\mathscr{D}_{AB}$ es inversamente proporcional a P, directamente proporcional a T e independiente de la concentración de un par de gases.
+Utilizando estados correspondientes y la teoría cinética, \( \mathscr{D}_{AB} \) está dado por la siguiente ecuación:
+\setcounter{figure}{50}
+\begin{equation}
+\frac{P \mathscr{D}_{AB}}{(P_{C_A} P_{C_{B}})^{1/5} (T_{{C_B}} T_{C_{B}})^{5/12} \left( \frac{1}{M_A} + \frac{1}{M_B} \right)^{1/2}} = a \left( \frac{T}{T_{C_A} T_{C_B}} \right)^b\tag{1.53}\label{eq_1.53}
+\end{equation}
+
+Gases no polares: \( a = 2.745 \times 10^{-4} \) y \( b = 1.823 \)  
+
+H$_2$O + gas no polar: \( a = 3.64 \times 10^{-4} \) y \( b = 2.334 \)
+
+En la figura \textbf{\eqref{fig:Fig_1.51}} se grafica \( C \mathscr{D}_{AA^*}\) como función de \( T_R \) y \( P_R \) (T y P reducidas), \( (C \mathscr{D}_{AA^*})_R=\frac{C\mathscr{D}_{AA^*}}{(C\mathscr{D}_{AA^*)_c}} \) .
+$((\mathscr{D})_c \text{es la cantidad crítica})$
+
+$(C\mathscr{D}_{AA^*})_c$ coeficiente de difusión crítico puede ser estimado por la siguiente ecuación:
+
+\begin{equation}
+(C\mathscr{D}_{AA^*})_c = 2.96 \times 10^{-6} \left( \frac{1}{M_A} + \frac{1}{M_{A^*}} \right)^{1/2} \frac{P_{cA}^{1/3}}{T_{cA}^{1/6}}\tag{1.54}\label{eq_1.54}
+\end{equation}
+
+En el caso de gases \( A \) y \( B \), la ecuación \textbf{\eqref{eq_1.54}} puede reducirse a la aproximación siguiente:
+
+\begin{equation}
+(C \mathscr{D}_{AA^*}) = 2.96 \times 10^{-6} \left( \frac{1}{M_A} + \frac{1}{M_B} \right)^{1/2}  \frac{(P_{cA} P_{cB})^{1/3}}{(T_{cA} T_{cB})^{1/12}} \tag{1.55}\label{eq_1.55}
+\end{equation}
+
+Correspondientemente, en el caso de A y B en la figura \textbf{\eqref{fig:Fig_1.51}}
+$T_R=\frac{T}{\sqrt{T_{cA}T_{cB}}}$ y $P_R=\frac{P}{\sqrt{P_{cA}P_{cB}}}$
+\begin{figure}[H]
+\centering
+        \includegraphics[width=0.7
+        \linewidth]{Capitulo1/Imagenes/Fig_1.51.jpeg}
+        \caption{Mezclador estático (a) y mezclador dinámico (b)}
+        \label{fig:Fig_1.51}
+
+\end{figure}
+
+\subsubsection{Teoría de la difusión en líquidos binarios}
+La teoría hidrodinámica se basa en la ecuación de Nernst-Einstein, que postula que la difusividad de una partícula A (el soluto) en un medio estacionario B está expresado como:
+
+\begin{equation}
+\mathscr{D}_{AB} = k_B T \frac{U_A}{F_A}\tag{1.56}\label{eq_1.56}
+\end{equation}
+
+en donde $U_A/F_A $ es la movilidad de la partícula A. Si A es esférica y además existe deslizamiento en la interfase sólido-fluido, se obtiene:
+
+\begin{equation}
+\frac{U_A}{F_A} = \frac{(3 \mu_B + R_A \beta_{AB})}{({2 \mu_B + R_A \beta_{AB}} )}  \frac{1}{6 \pi \mu_B R_A}\tag{1.57}\label{eq_1.57}
+\end{equation}
+
+en donde \( \mu_B \) es la viscosidad del solvente, \( R_A \) es el radio de la partícula y \( \beta_{AB} \) es el coeficiente de fricción interfacial. Hay 2 casos:
+
+a)-.$( \beta_{AB} = \infty )$ (sin deslizamiento).
+   En este caso, la ecuación \textbf{\eqref{eq_1.56}} se reduce a la ecuación de Stokes-Einstein:
+
+   \begin{equation}
+   \mathscr{D}_{AB} = \frac{k_B T}{6 \pi \mu_B R_A}\tag{1.58}\label{eq_1.58}
+   \end{equation}
+
+b)-. \( \beta_{AB} = 0 \) (con deslizamiento).  
+
+   En este caso, la ecuación \textbf{\eqref{eq_1.56}} se reduce a:
+
+   \begin{equation}
+   \mathscr{D}_{AB} = \frac{k_B T}{4 \pi \mu_B R_A}\tag{1.59}\label{eq_1.59}
+   \end{equation}
+
+Si A y B son iguales, en un arreglo cúbico se obtiene:
+
+
+$2 R_A = \left( \frac{\widetilde{V}_A}{\widetilde{N}_A} \right)^{1/3}$ y luego:
+
+\begin{equation}
+\mathscr{D}_{AB} = \frac{k_B T}{2 \pi \mu_A} \left( \frac{\widetilde{V}_A}{\widetilde{N}_A} \right)^{1/3}\tag{1.60}\label{eq_1.60}
+\end{equation}
+
+La teoría de Eyring del "estado activado" postula un estado "cuasicristalino" del líquido. Esta teoría deduce el siguiente resultado dentro del contexto de mecánica estadística:
+
+\begin{equation}
+\frac{\mathscr{D}_{AB} \mu_B}{(\mathscr{D}_{AB}\mu_B)_{X_A \to 0}} = \left[ 1 + X_A \frac{\widetilde{V}_A}{\widetilde{V}_B} \right] \left( \frac{\partial \ln \gamma_{A}}{d X_A} \right)_{T,P}\tag{1.61}\label{eq_1.61}
+\end{equation}
+en donde $\widetilde{V}_A$ y $\widetilde{V}_B$ son los volúmenes parciales molares de A y B, $\gamma_A$ es el coeficiente de actividad de A y $\mathscr{D}_{AB}$,$\mu_A$ son la difusividad y viscocidad de la mezcla.
+
+Expresiones empíricas sugeridas para situaciones reales han sido propuestas. Por ejemplo, la ec. de Wilke-Chang:
+\begin{equation}
+    \mathscr{D}_{AB}=7.4\times10^{-8}\frac{\sqrt{\psi_BM_B}}{\mu \widetilde{V}_A^{0.6}}T
+\tag{1.62}\label{eq_1.62}
+\end{equation}
+donde $\psi_B$ es el "parametro de asociación" del solvente.
+
+$\psi_B=2.6$ para agua y 1.9 para metanol.
+$\psi_B=1$ para solventes no asociativos. $\widetilde{V}_A=M_A/\rho$ y $\mu$ esta dada en cp.
+\input{Capitulo1/tarea1.tex}
+\input{Capitulo1/apendices.tex}
+
+  
