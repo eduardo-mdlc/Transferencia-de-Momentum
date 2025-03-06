@@ -1,13 +1,14 @@
 \section{Tarea 1}
 Bird et all 17.A
+\justifying
 \begin{itemize}
 \item[1.-] Predicción binaria a baja densidad. 
-    Estimar $D_{AB}$  para el sistema metano-etano a 293°K y 1 atm por medio de los siguientes métodos.
+    Estimar $\mathscr{D}_{AB}$  para el sistema metano-etano a 293°K y 1 atm por medio de los siguientes métodos.
     \begin{itemize}
-        \item [a)-] Ecuación 1.53
-        \item [b)-] Ecuación 1.53 y gráfica Fig 1.51 utilizando las T y P reducidas $T_{r}=\frac{T}{\sqrt{T_{CA}T_{CB}}}$ , $P_{r}=\frac{P}{\sqrt{P_{CA}P_{CB}}}$
-        \item [c)-] Ecuación 1.46, 1.48 y 1.49, y los parámetros de Lennard-Joues del Apéndice C.
-        \item [d)-] Ecuación 1.46 en los parámetros de Lennard-Jones estimados a partir de las propiedades críticas siguientes:
+        \item [a)-] Ecuación \textbf{\eqref{eq_1.53}}
+        \item [b)-] Ecuación \textbf{\eqref{eq_1.53}} y gráfica Fig \textbf{\eqref{fig:Fig_1.51}} utilizando las T y P reducidas $T_{r}=\frac{T}{\sqrt{T_{CA}T_{CB}}}$ , $P_{r}=\frac{P}{\sqrt{P_{CA}P_{CB}}}$
+        \item [c)-] Ecuación \textbf{\eqref{eq_1.46}}, \textbf{\eqref{eq_1.48}} y \textbf{\eqref{eq_1.49}}, y los parámetros de Lennard-Joues del Apéndice C.
+        \item [d)-] Ecuación \textbf{\eqref{eq_1.46}} en los parámetros de Lennard-Jones estimados a partir de las propiedades críticas siguientes:
          $$\frac{\epsilon}{k_{13}}=0.77\sqrt{T_{CA}T_{CB}}  ,  T=\frac{2.44}{2} \left[ \left(\frac{T_{CA}}{P_{CA}}\right)^{1/5}+\left(\frac{T_{CB}}{P_{CB}}\right)^{1/3} \right] $$
     \end{itemize} 
     Respuestas ($cm^2/s$) : a)- 0.152; b)- 0.138; c)- 0.146; d)- 0.138
@@ -18,7 +19,7 @@ por la ec. 160.
     \centering  %Le digo  que se centre %
     \begin{tabular}{cccc}
     \hline
-    \textbf{T(K)} & \textbf{$ D_{AB} $ $cm^2/s$} & \textbf{$\mu$ cP} & \textbf{$\hat{V}$ $cm^3/s$} \\ \hline
+    T[K] & \textbf{$ \mathscr{D}_{AB} $ $[cm^2/s]$} & $\mu$ [cP] & $\hat{V}$ $[cm^3/s]$ \\ \hline
             275.7 & $1.52 \times 10^{-5}$ & 1.68 & 0.0736 \\ 
             289.6 & $1.68 \times 10^{-5}$ & 1.56 & 0.0737 \\ 
             364.2 & $2.57 \times 10^{-5}$ & 1.27 & 0.0748 \\ \hline
@@ -27,38 +28,38 @@ por la ec. 160.
 
 Bird et all 17.A.5    
 \item[3.-] Cálculo de la difusividad de una muestra binaria a alta densidad. 
-Predecir $pD_{AB}$ para una mezcla equimolar de $N_{2}$ y $C_{2}H_{6}$ a 288.2 K y 40 atm.
+Predecir $\rho \mathscr{D}_{AB}$ para una mezcla equimolar de $N_{2}$ y $C_{2}H_{6}$ a 288.2 K y 40 atm.
     \begin{itemize}
-     \item [a)-] Usar el valor de $D_{AB}$ a 1 atm de  0.148 $cm^2/s$ a T=298.2 Ky la gráfica de la Fig.1.51
-     \item [b)-] Usar la ecuación 1.55 y la Fig 1.51
+     \item [a)-] Usar el valor de $\mathscr{D}_{AB}$ a 1 atm de  0.148 $cm^2/s$ a T=298.2 Ky la gráfica de la Fig.\textbf{\eqref{fig:Fig_1.51}}
+     \item [b)-] Usar la ecuación \textbf{\eqref{eq_1.55}} y la Fig. \textbf{\eqref{fig:Fig_1.51}}
     \end{itemize}    
 Respuesta a).- $5.8*10^{-6}$ gmol/cms; b).- $5.3*10^{-6}$ gmol/cms
 \item[4.-] Prob. 17.A.6 Bird
 Difusividad y número de Schmidit para mezclas cloro-aire. 
     \begin{itemize}
-    \item [a)-] Predecir $D_{AB}$ para mezclas cloro-aire a 75°F y 1 atm.
+    \item [a)-] Predecir $\mathscr{D}_{AB}$ para mezclas cloro-aire a 75°F y 1 atm.
     Utilizar los parámetros del Apéndice C.
-    \item [b)-] Calcular (a) utilizando la ec. 1.53
+    \item [b)-] Calcular (a) utilizando la ec. \textbf{\eqref{eq_1.53}}
     \item [c)-]Utilizar los resultados de (a) para estimar los valores del número de Schmidit para mezclas cloro-aire a 297 K y 1 atm para las siguientes fracciones mol y viscosidades:
-    0, $1.83*10^{-4} poises$; 0.25, $1.64*10^{-4} poises$; 0.5, $1.5*10^{-4} poises$; 0.75, $1.39x10^{-4} poises$; 1, $1.31*10^{-4} poises$
-    $$ pD_{AB}= \frac{\rho}{RT}D_{AB}; \space  Sc=\frac{\mu}{M_{C}D_{AB}}=\frac{\mu}{(x_{A}M_{A}+x_{B}M_{B})pD_{AB}}$$
+    0, $1.83\times 10^{-4} $ poises; 0.25, $1.64 \times10^{-4} $ poises; 0.5, $1.5\times10^{-4} $ poises; 0.75, $1.39\times10^{-4} $ poises; 1, $1.31\times10^{-4} $ poises
+    $$ p\mathscr{D}_{AB}= \frac{\rho}{RT}\mathscr{D}_{AB};\space  Sc=\frac{\mu}{M_{C}\mathscr{D}_{AB}}=\frac{\mu}{(x_{A}M_{A}+x_{B}M_{B})p\mathscr{D}_{AB}}$$
 \end{itemize}
 Respuestas: a).- 0.121 $cm/s$; b).- 0.124 $cm/s$; c).- Sc=1.27, 0.832, 0.602, 0.463, 0.372
 \item[5.-] Probl. 17.A.8 Bird.
 Corrección para la difusividad a altas densidades. 
-El valor medido para $pD_{AB}$ de una mezcla de 80\% mol de $CH_{4}$ Y 20\% mol de $C_{2}H_{6}$ a 313 K y 136 atm es $6x10^-6$ gmol/cms.
-Calcular $pD_{AB}$ para esa mezcla a 136 atm y 351 K usando la Fig 1.51.
+El valor medido para $p\mathscr{D}_{AB}$ de una mezcla de 80\% mol de $CH_{4}$ Y 20\% mol de $C_{2}H_{6}$ a 313 K y 136 atm es $6\times10^-6$ gmol/cms.
+Calcular $p\mathscr{D}_{AB}$ para esa mezcla a 136 atm y 351 K usando la Fig. \textbf{\eqref{fig:Fig_1.51}}.
 
-Respuesta $6.3*10^{-6} gmol/cm s$. Observado $6.33*10^{-6 }gmol/cm s$
+Respuesta $6.3\times 10^{-6} gmol/cm s$. Observado $6.33 \times 10^{-6 }gmol/cm s$
 \item[6.-]   Probl 17 A.10 Bird 
 Cálculo de difusividad de líquidos 
 \begin{itemize}
-     \item [a)-] Calcular la difusividad de una solución diluida de ácido acético a 12.5°C utilizando la ec. 1.62. La densidad del ácido acético es 0.937 $g/cm^3$ en el punto de ebullición.
-     \item [b)-] La difusividad de una solución diluida de metanol a 15°C es $1.28*10^{-5} cm^2/s$. Calcular la difusividad de esa solución a 100°C. 
+     \item [a)-] Calcular la difusividad de una solución diluida de ácido acético a 12.5°C utilizando la ec. \textbf{\eqref{eq_1.62}}. La densidad del ácido acético es 0.937 $g/cm^3$ en el punto de ebullición.
+     \item [b)-] La difusividad de una solución diluida de metanol a 15°C es $1.28\times 10^{-5} cm^2/s$. Calcular la difusividad de esa solución a 100°C. 
      Las viscosidades a 15°C y 100°C son 1.14 cp y 0.28cp.
      La viscosidad de la solución diluida es 1.22 cp.
     \end{itemize}
-Respuesta (b).- $6.7*10^{-5} cm^2/s$.
+Respuesta (b).- $6.7\times10^{-5} cm^2/s$.
 \end{itemize}
 \newpage
 
