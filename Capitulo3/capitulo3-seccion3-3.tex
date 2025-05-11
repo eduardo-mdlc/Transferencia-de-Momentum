@@ -1,0 +1,221 @@
+\section{Convección forzada en placa plana con transferencia de masa rápida}
+Considerar un flujo a régimen permanente, bidimensional y de un fluido binario, como aparece en la figura 3.2.
+
+\begin{figure}[H]
+	\center
+	\includegraphics[scale=0.5]{./Capitulo3/Imagenes/Fig_3.2.JPG}
+	\caption{Flujo tangencial a lo largo de una placa semi-infinita con transferencia de masa. La transición laminar-turbulenta ocurre a un Reynolds crítico $(xv_\infty / \nu)_c$ de $10^5 - 10^6$. } 
+	 \label{fig:Fig_3.2}
+\end{figure}
+
+Las propiedades del fluido $\rho, \mu, \hat{Cp}, k, \mathscr{D}_{AB}$ son constantes. 
+
+Primeramente se considerará el régimen isotérmico. 
+
+$v_0(x)$ describe la distribución del flux de masa en la placa.
+
+Las ecuaciones de capa límite en este caso son:
+
+Continuidad:
+\begin{equation}
+	\frac{\partial v_x}{\partial x} + 		\frac{\partial v_y}{\partial y} = 0
+	\label{eq_3.22}
+\end{equation}
+
+Movimiento: 
+\begin{equation}
+	v_x \frac{\partial v_x}{\partial x} + v_y \frac{\partial v_x}{\partial y} = \nu \frac{\partial^2 v_x}{\partial y^2}
+	\label{eq_3.23}
+\end{equation}
+
+Continuidad de $A$:
+\begin{equation}
+	v_x \frac{\partial w_A}{\partial x} + v_y \frac{\partial w_A}{\partial y} = \mathscr{D}_{AB} \frac{\partial^2 w_A}{\partial y^2}
+	\label{eq_3.24}
+\end{equation}
+
+Condiciones de frontera:
+\begin{equation}
+	v_x |_{y \to \infty} = v_\infty, \hspace{0.5cm} w_A | _{y \to \infty} = w_{A\infty}
+	\label{eq_3.25}
+\end{equation}
+
+\begin{equation}
+v_x |_{y =0} = 0, \hspace{0.5cm} w_A|_{y=0}=w_{A0}, \hspace{0.5 cm} v_y|_{y=0} = v_0 (x)
+	\label{eq_3.26}
+\end{equation}
+
+Integrando la ec. \eqref{eq_3.22}:
+\begin{equation}
+v_y = v_0(x) - \frac{\partial}{\partial x} \int_0^y v_x dy
+	\label{eq_3.27}
+\end{equation}
+
+Definiendo:
+\begin{equation}
+	\Pi_v = \frac{v_x}{v_\infty} \hspace{0.5cm} \text{y} \hspace{0.5cm} \Pi_w = \frac{w_A - w_{A0}}{w_{A\infty}-w_{A0}}
+	\label{eq_3.28}
+\end{equation}
+
+Las ecs.\eqref{eq_3.23} y \eqref{eq_3.24} toman la forma:
+\begin{equation}
+	\Pi_v \frac{\partial \Pi_v}{\partial x} + \left( \frac{v_0(x)}{v_\infty} - \frac{\partial}{\partial x} \int_0^y \Pi_v dy \right)\frac{\partial \Pi_v}{\partial y} = \frac{\nu}{v_\infty} \frac{\partial^2 \Pi_v}{\partial y^2}
+	\label{eq_3.29}
+\end{equation}
+
+\begin{equation}
+	\Pi_v \frac{\partial \Pi_w}{\partial x} + \left( \frac{v_0(x)}{v_\infty} - \frac{\partial}{\partial x} \int_0^y \Pi_v dy \right)\frac{\partial \Pi_w}{\partial y} = \frac{\mathscr{D}_{AB}}{v_\infty} \frac{\partial^2 \Pi_w}{\partial y^2}
+	\label{eq_3.30}
+\end{equation}
+
+Con condiciones de frontera:
+\begin{equation}
+	\Pi_v, \Pi_w |_{y \to \infty} = 1 \hspace{0.5cm} \text{y} \hspace{0.5cm} \Pi_v, \Pi_w |_{y = 0} = 0
+	\label{eq_3.31}
+\end{equation}
+
+Por medio del método del combinación de variables, se propone:
+\begin{equation}
+	\eta = y \sqrt{\frac{1}{2} \frac{v_\infty}{\nu x}}
+	\label{eq_3.32}
+\end{equation}
+
+La ec. \eqref{eq_3.29} se resuelve siguiendo la solución de Blasius. Se define la función de corriente $\Psi$ de acuerdo a: 
+\begin{equation}
+	v_x = \frac{\partial \Psi}{\partial y}, \hspace{0.5cm} v_y = - \frac{\partial \Psi}{\partial x}
+	\label{eq_3.33}
+\end{equation}
+
+Las cuales satisfacen la ec. \eqref{eq_3.22}. Idénticamente la ec. \eqref{eq_3.23} en términos de $\Psi$ se expresa como: 
+\begin{equation}
+	\frac{\partial \Psi}{\partial y} \frac{\partial^2 \Psi}{\partial x \partial y} - \frac{\partial \Psi}{\partial x} \frac{\partial^2 \Psi}{\partial y^2} = \nu \frac{\partial^3 \Psi}{\partial y^3}
+	\label{eq_3.34}
+\end{equation}
+
+Ahora, a partir de las ecs. \eqref{eq_3.33} y \eqref{eq_3.32}:
+\begin{equation}
+\Psi = \int v_x dy = \int v_x \sqrt{\frac{2 \nu x}{v_\infty}} d\eta = \int \Pi_v \sqrt{2 \nu x v_\infty} d\eta = \sqrt{2 \nu x v_\infty} f(\eta)
+\label{eq_3.35}
+\end{equation}
+
+donde $f(\eta) = \int_0^\eta \Pi_v d\eta$. También a partir de la ec. \eqref{eq_3.27}:
+
+\begin{equation}
+	\Psi = - \int v_y dx = - \int \left[v_0(x) - \frac{\partial}{\partial x} \int_0^y v_x dy \right]dx = - \int v_0(x)dx + \int_0^y v_xdy
+	\label{eq_3.36}
+\end{equation}
+
+Si $v_0 = 0$, recobramos la ec. \eqref{eq_3.35}. Si $v_0 \neq 0$, entonces, como $dx = \frac{-2x}{\eta} d\eta$ tenemos: 
+\begin{equation}
+	- \int v_0(x)dx = \frac{2x}{\eta} \int v_0(x) d\eta = \frac{2x}{y} \sqrt{2 \nu x v_\infty} \int_0^\eta \frac{v_0}{v_\infty} d\eta
+	\label{eq_3.37}
+\end{equation}
+
+Luego, sustituyendo \eqref{eq_3.36} y \eqref{eq_3.37} en la ec. \eqref{eq_3.35} obtenemos:
+$$\Psi = \sqrt{2 \nu x v_\infty} \left(f + \frac{2x}{y} \frac{v_0}{v_\infty} \eta \right)$$
+
+si $v_0$ varía como $\frac{1}{\sqrt{x}}$ en \eqref{eq_3.37} tenemos que:
+\begin{equation}
+	\frac{2x\eta}{y} = - \sqrt{\frac{2v_\infty x}{\nu}} \hspace{0.5cm},\hspace{0.5cm} \frac{v_0}{v_\infty} \sqrt{\frac{2 v_\infty x}{\nu}} = - k  \hspace{0.5cm} \text{constante}
+	\label{eq_3.38}
+\end{equation}
+
+Se requiere que $k$ sea constante, de tal forma que las velocidades o derivadas de $\Psi$ no sean función de $k$, sino de $\eta$. La ecuación de $\Psi$, por lo tanto, es:
+
+\begin{equation}
+	\Psi = \sqrt{2 \nu x v_\infty}(f-k), \hspace{0.5cm} f = \int_0^\eta \Pi_v d\eta
+	\label{eq_3.39}
+\end{equation}
+
+El desarrollo de la solución de Blasius ******
+
+\begin{multline*}
+	\frac{\partial \Psi}{\partial x} = \sqrt{2 \nu v_\infty} \frac{\partial}{\partial x} (\sqrt{x} f) = \sqrt{2 \nu v_\infty x}  \frac{\partial f}{\partial x} + \frac{1}{2} x^{-1/2} f \sqrt{2 \nu v_\infty} \\
+ = \sqrt{2 \nu v_\infty x} \left( - \frac{1}{2} \frac{\eta}{x} f' \right) + \frac{1}{2} f \sqrt{\frac{2 \nu v_\infty}{x}}
+\end{multline*}
+
+ya que $\frac{\partial \eta}{ \partial x} = - \frac{1}{2} \frac{\eta}{x}$
+
+\begin{equation*}
+	\frac{\partial \Psi}{\partial x} = - \frac{\eta^2}{y} \nu f' + \frac{\eta}{y} \nu f
+\end{equation*}
+
+\begin{equation*}
+	\frac{\partial \Psi}{\partial y} = \frac{\partial \Psi}{\partial \eta} \frac{\partial \eta}{\partial y} = \frac{\eta}{y} \frac{\partial \Psi}{\partial \eta} = \sqrt{\frac{v_\infty}{2 \nu x}} \sqrt{2 \nu x v_\infty} f' = v_\infty f'
+\end{equation*}
+
+\begin{equation*}
+	\frac{\partial}{\partial x} \frac{\partial \Psi}{\partial y} = v_\infty \frac{\partial}{\partial x} f' = v_\infty f'' \frac{\partial \eta}{\partial x} = -\frac{1}{2} \frac{\eta}{x} v_\infty f''
+\end{equation*}
+
+\begin{equation*}
+	\frac{\partial^2 \Psi}{\partial y^2} = v_\infty \frac{\partial f'}{\partial y} = v_\infty \frac{\partial f'}{\partial \eta} \frac{\partial \eta}{\partial y} = v_\infty \frac{\eta}{y} f''
+\end{equation*}
+
+\begin{equation*}
+	\frac{\partial^3 \Psi}{\partial y^3} = v_\infty \frac{\eta^2}{y^2} f'''
+\end{equation*}
+
+Substituyendo en la ec. \eqref{eq_3.34}:
+
+\begin{equation*}
+	(v_\infty f')\left( - \frac{1}{2} \frac{\eta}{x} v_\infty f''\right) - \left[- \frac{\eta^2}{y} \nu f' + \frac{\eta}{y} \nu f \right]v_\infty \frac{\eta}{y} f'' 
+= \nu v_\infty \frac{\eta^2}{y^2}f'''
+\end{equation*}
+
+\begin{equation*}
+	v_\infty f' \left( -\nu \frac{\eta^3}{y^2} f''\right) + v_\infty \frac{\eta^3}{y^2} \nu f' f'' - \frac{\eta^2}{y^2} \nu v_\infty ff'' = \nu v_\infty \frac{\eta^2}{y^2} f'''
+\end{equation*}
+
+Ya que $\frac{v_\infty}{2 x} = \frac{\eta^2}{y^2} \nu$ \\
+
+Luego entonces:
+\begin{equation}
+	ff'' + f''' = 0
+	\label{eq_3.40}
+\end{equation}
+
+Con las condiciones de frontera:
+\begin{equation}
+\begin{cases}
+   f'|_{\eta \to \infty} = 1 \hspace{0.5cm} \text{(Como $v_x = \frac{\partial \Psi}{\partial y} = v_\infty f' $, significa que $v_x = v_\infty$ cuando $y \to \infty$)} \\
+   f'|_{\eta =0} = 0 \hspace{0.5 cm} \text{($v_x = 0$ en $\eta = 0$)} \\
+   f|_{\eta = 0} = -k \hspace{0.5cm} \text{(En la superficie $\Psi = \sqrt{2 \nu x v_\infty}(-k)$)}
+\end{cases}
+\label{eq_3.41}
+\end{equation}
+
+Resolviendo para $f, f', f''$ y $f'''$ es posible conocer el perfil de velocidades ($f' = v_x / v_\infty$) en función de $\eta$ para ********* de k. La solución se da por métodos numéricos.
+
+Resultados de interés obtenidos a partir de la solución incluyen la distribución del esfuerzo cortante a lo largo de la superficie. El esfuerzo cortante sobre la supeficie está expresado por:
+
+\begin{equation}
+	\tau_0 (x) = \mu \frac{\partial v_x}{\partial y} (x,0) = \mu \frac{\partial^2 \Psi}{\partial y^2} (x,0) = \mu v_\infty \frac{\eta}{y} f'' = \mu \sqrt{\frac{v_\infty^3}{2 \nu x}} f'' (0)
+	\label{eq_3.42}
+\end{equation}
+
+Adimensionalizando $\tau_0(x)$: 
+	\begin{equation}
+\frac{\tau_0}{\rho (v_\infty - 0) v_\infty} = \frac{\mu}{\rho}  \sqrt{\frac{1}{2 \nu x v_\infty}} f''(0) = \sqrt{\frac{\nu}{2 v_\infty x}} f''(0) = \frac{1}{\sqrt{2 Re}} f''(0)
+	\label{eq_3.43}
+\end{equation}
+
+donde $Re$ es el número de Reynolds.\\
+
+Numéricamente $f''(0) = 0.332$.\\
+
+El mismo procedimiento se sigue para la resolución de la ec. \eqref{eq_3.30} para el perfil de concentraciones. Ahora $f' = \Pi_w = \frac{w_A - w_{A0}}{w_{A \infty} - w_{A0}}$ y análogamente a la ec. \eqref{eq_3.43} tenemos:
+
+\begin{equation}
+	\frac{j_{A0}}{\rho v_\infty (w_{A0}- w_{A\infty})} = \frac{f''(0)}{Sc} \sqrt{\frac{\nu}{2 v_\infty x}}
+	\label{eq_3.44}
+\end{equation}
+
+Los perfiles de velocidad y concentración se exhiben en la figura \eqref{fig:Fig_3.2}, para diferentes valores de $k$ y del número de Schmidt ($Sc$). $k=0$ significa ausencia de transferencia de masa, $k$ positivo o negativo significa transferencia de masa hacia el fluido (evaporización) o hacia la placa (condensación), respectivamente.
+
+\begin{figure}[H]
+	\center
+	\includegraphics[scale=0.5]{./Capitulo3/Imagenes/Fig_3.2.JPG}
+	\caption{Perfiles de velocidades y concentraciones en capa límite laminar sobre placa plana con transferencia de masa en la superficie} 
+	 \label{fig:Fig_3.3}
+\end{figure}
