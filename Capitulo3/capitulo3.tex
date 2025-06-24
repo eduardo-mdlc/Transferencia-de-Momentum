@@ -66,6 +66,21 @@ Estas ecuaciones son extensiones de los balances de von Kármán y de la integra
 \input{Capitulo3/cap3-S2.tex}
 \input{Capitulo3/capitulo3-seccion3-3.tex} %Sección 3.3
 \section{Convección forzada en placa plana con transferencia de masa lenta}
+ Del problema de transferencia de calor en una placa plana, se pueden derivar analogías para transferencia de masa. A partir de la expresión:
+
+\begin{equation}
+\frac{q_0}{\rho \hat{C}_p v_\infty (T_0 - T_\infty)} \approx 0.332 \, Pr^{2/3} \sqrt{\frac{\nu}{v_\infty x}}	\tag{3.45}
+        \label{eq_3.45}
+\end{equation}
+
+En el caso de $k = 0$ ($v_0 (x) = 0$). De acuerdo a la ec. \ref{eq_3.43} podemos sugerir la siguiente analogía:
+
+\begin{equation}
+\frac{\tau_0}{\rho v_\infty ( v_\infty-0)} \approx \frac{q_0}{\rho \hat{C}_p v_\infty(T_0 - T_\infty)} Pr^{2/3} \approx \frac{j_{A_0}}{\rho v_\infty(w_{A_0}-w_{A_\infty})}Sc^{2/3}=  0.332 \sqrt{\frac{\nu}{v_\infty x}}
+	\tag{3.46}
+        \label{eq_3.46}
+        
+\end{equation}
 \section{Difusión de Taylor en flujo laminar}
 \section{Transferencia de masa con reacción de $1^{er}$ orden en flujo turbulento}
 
